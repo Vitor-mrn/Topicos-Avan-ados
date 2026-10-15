@@ -5,6 +5,10 @@
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
+<<<<<<< HEAD
     "azureFunctions.projectLanguageModel": 2,
     "python-envs.defaultEnvManager": "ms-python.python:system"
+=======
+    "azureFunctions.projectLanguageModel": 2
+>>>>>>> b8bbb47b056906fccfb309fbc82d9d63aa49a49d
 }
