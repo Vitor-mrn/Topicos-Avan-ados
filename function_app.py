@@ -1,6 +1,5 @@
 import logging
 import azure.functions as func
-<<<<<<< HEAD
 import os
 import pyodbc
 
@@ -30,7 +29,7 @@ def extract_chamado(myTimer: func.TimerRequest) -> None:
 
     try:
         # Estabelece a conexão
-        conn = pyodbc.connect(conn_str)
+        conn = pyoodbc.connect(conn_str)
 
         logging.info("Conexão com o banco estabelecida com sucesso.")
 
@@ -61,24 +60,3 @@ def extract_chamado(myTimer: func.TimerRequest) -> None:
     except pyodbc.Error as e:
         logging.error(f"Erro no banco de dados: {e}")
         raise
-=======
-
-app = func.FunctionApp()
-
-@app.timer_trigger(schedule="0 * /15 * * *", arg_name="myTimer", run_on_startup=False,
-              use_monitor=False) 
-def timer_trigger(myTimer: func.TimerRequest) -> None:
-    if myTimer.past_due:
-        logging.info('The timer is past due!')
-
-    logging.info('Python timer trigger function executed.')
-
-    usuario = os.getenv("USER")
-    senha = os.getenv("password")
-    database = os.getenv("BDA")
-    HOST = os.getenv("lider")
-    print(usuario)  
-    print(password)              
-    print(lider)
-    print(BDA)
->>>>>>> b8bbb47b056906fccfb309fbc82d9d63aa49a49d
